@@ -20,3 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('items', ItemController::class);
+
+Route::put('/items/{id}/update-quantity', [ItemController::class, 'updateQuantityByUrl'])->name('items.updateQuantityByUrl');
+
+
